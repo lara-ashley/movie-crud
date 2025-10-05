@@ -16,10 +16,12 @@
 
    <ul>
     @foreach ($movies as $movie )
-        <li>{{ $movie->name }}</li>
+        <li>{{ $movie->name }} | <a href="{{ route('movies.edit', $movie->id) }}">Editar</a> </li>
     @endforeach
 
    </ul>
+
+   <a href="{{ route('movies.create') }}">Cadastrar</a>
 
 </body>
 

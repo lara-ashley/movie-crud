@@ -7,26 +7,17 @@ use App\Models\Movie;
 
 class MovieController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {   
         $movies = Movie::all();
         return view("movies.index", compact("movies"));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         return view("movies.create");
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
         movie::create($request->all());
@@ -34,28 +25,26 @@ class MovieController extends Controller
         return redirect()->route("movies.index");
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show(string $id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(string $id)
     {
-        //
+        $movie = movie::findOrFail($id);
+
+        return view("movies.edit",compact("movie"));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, string $id)
     {
-        //
+        $movie = movie::findOrFail($id);
+
+        $movie->update($request->all());
+
+        return redirect()->route("movies.index");
+
     }
 
     /**

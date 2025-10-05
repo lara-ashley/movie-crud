@@ -12,14 +12,15 @@
 
 <body>
 
-    <h1>Cadastro de filmes</h1>
+    <h1>Editar filmes</h1>
 
-    <form action="{{ route('movies.store') }}" method="post">
+    <form action="{{ route('movies.update', $movie->id) }}" method="post">
+        @method("put")
 
         @csrf
         <label for="name">Nome do filme</label>
-        <input type="text" name="name">
-        <input type="submit" value="cadastrar">
+        <input type="text" name="name" value="{{ $movie->name }}">
+        <input type="submit" value="Editar">
 
     </form>
 
