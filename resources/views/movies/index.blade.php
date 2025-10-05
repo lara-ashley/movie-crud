@@ -12,7 +12,7 @@
 
 <body>
 
-   <h1>Filmes disponíveis pra assistir</h1>
+   <h1>Filmes disponíveis para assistir</h1>
 
    <ul>
     @foreach ($movies as $movie )
