@@ -1,0 +1,162 @@
+/* Geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #2b0e58;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Botão */
+.btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.botaocreate{
+    justify-content: center;
+    display: flex;
+}
+
+.btn-cadastrar {
+    background-color: #2f00ff;
+    display: inline-block;
+    margin-bottom: 20px;
+
+}
+.botaoedit{
+    justify-content: center;
+    display: flex;
+}
+
+.btn-editar {
+    background-color: #ae57ff;
+    text-align: center;
+    justify-content: center;
+    
+    display: flex;
+    
+}
+
+.btn-deletar {
+    background-color: #2108ad;
+}
+
+/* Lista de filmes */
+.movie-list {
+    list-style: none;
+    padding: 0;
+}
+
+.movie-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    margin-bottom: 8px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+}
+
+.movie-item:hover {
+    background-color: #dee2e6;
+}
+
+.actions {
+    display: flex;
+    gap: 5px;
+}
+
+.inline-form {
+    display: inline;
+}
+
+.no-movies {
+    text-align: center;
+    color: #6c757d;
+}
+
+/* Formulário de filmes */
+.form-movie {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form-movie label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-movie input[type="text"] {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-movie button {
+    width: 150px;
+    align-self: flex-start;
+}
+
+/* Formulário de filmes */
+.form-movie {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form-movie label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-movie input[type="text"] {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-movie button {
+    width: 150px;
+    align-self: flex-start;
+}
+
+.alert {
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #4b0091;
+    border: 1px solid #c3e6cb;
+}

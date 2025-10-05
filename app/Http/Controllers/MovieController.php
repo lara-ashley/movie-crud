@@ -22,7 +22,8 @@ class MovieController extends Controller
     {
         movie::create($request->all());
 
-        return redirect()->route("movies.index");
+        return redirect()->route("movies.index")->with('success', 'Filme cadastrado com sucesso!');
+
     }
 
     public function show(string $id)
@@ -43,7 +44,7 @@ class MovieController extends Controller
 
         $movie->update($request->all());
 
-        return redirect()->route("movies.index");
+        return redirect()->route("movies.index")->with('success', 'Filme atualizado com sucesso!');
 
     }
 
@@ -53,7 +54,8 @@ class MovieController extends Controller
 
         $movie->delete();
 
-        return redirect()->back();
+        return redirect()->route("movies.index")->with('success', 'Filme deletado com sucesso!');
+
 
     }
 }
